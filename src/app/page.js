@@ -1,66 +1,159 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+const projects = [
+  {
+    title: "Commercial Edit",
+    category: "Advertisement",
+  },
+  {
+    title: "Creator Documentary",
+    category: "YouTube",
+  },
+  {
+    title: "Product Launch",
+    category: "Social Media",
+  },
+  {
+    title: "Brand Story",
+    category: "Corporate",
+  },
+];
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      <header className="site-header">
+        <a href="#" className="logo">
+          YOUR NAME
+        </a>
+
+        <nav aria-label="Main navigation">
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <main>
+        <section className="hero">
+          <p className="eyebrow">Video Editor &amp; Storyteller</p>
+
+          <h1>I turn raw footage into stories people remember.</h1>
+
+          <p className="hero-description">
+            I create engaging videos for brands, businesses, and online
+            creators.
           </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
+
+          <div className="hero-actions">
+            <a href="#work" className="button button-primary">
+              View my work
+            </a>
+
+            <a href="#contact" className="button button-secondary">
+              Contact me
+            </a>
+          </div>
+        </section>
+
+        <section className="showreel" aria-label="Video showreel">
+          <div className="video-placeholder">
+            <button type="button" aria-label="Play showreel">
+              ▶
+            </button>
+
+            <p>Showreel coming soon</p>
+          </div>
+        </section>
+
+        <section className="section" id="work">
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">Selected work</p>
+              <h2>A few projects I&apos;m proud of.</h2>
+            </div>
+
+            <p>
+              These placeholders will later become project thumbnails and
+              video case studies.
+            </p>
+          </div>
+
+          <div className="project-grid">
+            {projects.map((project, index) => (
+              <article className="project-card" key={project.title}>
+                <div className="project-image">
+                  <span>0{index + 1}</span>
+                </div>
+
+                <div className="project-details">
+                  <h3>{project.title}</h3>
+                  <p>{project.category}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="section about" id="about">
+          <p className="eyebrow">About me</p>
+
+          <div className="about-content">
+            <h2>Editing with purpose, rhythm, and attention to detail.</h2>
+
+            <div>
+              <p>
+                Write a short introduction here. Explain who you work with,
+                what kinds of videos you edit, and what makes your approach
+                different.
+              </p>
+
+              <p>
+                Your full biography, software experience, and editing process
+                can be added later.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="section contact" id="contact">
+          <p className="eyebrow">Have a project?</p>
+
+          <h2>Let&apos;s create something worth watching.</h2>
+
+          <a href="mailto:you@example.com" className="button button-primary">
+            you@example.com
           </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+        </section>
       </main>
-    </div>
+
+      <footer>
+        <p>© {new Date().getFullYear()} Your Name</p>
+
+        <div className="social-links">
+          <a
+            href="https://instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram
+          </a>
+
+          <a
+            href="https://youtube.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            YouTube
+          </a>
+
+          <a
+            href="https://linkedin.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+        </div>
+      </footer>
+    </>
   );
 }
