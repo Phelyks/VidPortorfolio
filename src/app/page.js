@@ -7,18 +7,22 @@ const projects = [
   {
     title: "Commercial Edit",
     category: "Advertisement",
+    embedUrl: "",
   },
   {
     title: "Creator Documentary",
     category: "YouTube",
+    embedUrl: "",
   },
   {
     title: "Product Launch",
     category: "Social Media",
+    embedUrl: "",
   },
   {
     title: "Brand Story",
     category: "Corporate",
+    embedUrl: "",
   },
 ];
 
@@ -27,7 +31,7 @@ const featuredVideos = [
   {
     title: "Lumohubs Talking Head",
     platform: "YouTube Short",
-    embedUrl: "https://www.youtube.com/embed/KJ0yNQpOrrE/embed/",
+    embedUrl: "https://www.youtube.com/embed/KJ0yNQpOrrE",
   },
   {
     title: "Social media reel",
@@ -219,8 +223,11 @@ function WorkCarousel() {
         onWheel={stopAutoScroll}
         aria-label="Featured video carousel"
       >
-        {featuredVideos.map((video) => (
-          <article className="reel-card" key={`${video.platform}-${video.title}`}>
+        {featuredVideos.map((video, index) => (
+          <article
+            className="reel-card"
+            key={`${video.embedUrl}-${index}`}
+          >
             <div className="reel-frame">
               <iframe
                 src={video.embedUrl}
@@ -322,16 +329,29 @@ export default function Home() {
             </div>
 
             <p>
-              These placeholders will later become project thumbnails and video
-              case studies.
+              A selection of long-form edits, interviews, webinars, and brand
+              stories.
             </p>
           </div>
 
           <div className="project-grid">
             {projects.map((project, index) => (
               <article className="project-card" key={project.title}>
-                <div className="project-image">
-                  <span>0{index + 1}</span>
+                <div className="project-video">
+                  {project.embedUrl ? (
+                    <iframe
+                      src={project.embedUrl}
+                      title={project.title}
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    />
+                  ) : (
+                    <div className="project-video-placeholder">
+                      <span>0{index + 1}</span>
+                      <p>Add YouTube video</p>
+                    </div>
+                  )}
                 </div>
 
                 <div className="project-details">

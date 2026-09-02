@@ -341,24 +341,43 @@ h3 {
   gap: 48px 24px;
 }
 
-.project-image {
-  aspect-ratio: 16 / 10;
+.project-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
   background: var(--surface);
   border: 1px solid var(--border);
-  display: flex;
-  align-items: flex-end;
-  padding: 24px;
   transition:
     border-color 0.2s ease,
     transform 0.2s ease;
 }
 
-.project-card:hover .project-image {
+.project-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.project-card:hover .project-video {
   border-color: var(--muted);
   transform: translateY(-4px);
 }
 
-.project-image span {
+.project-video-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px;
+}
+
+.project-video-placeholder span,
+.project-video-placeholder p {
   color: var(--muted);
   font-size: 0.8rem;
 }
