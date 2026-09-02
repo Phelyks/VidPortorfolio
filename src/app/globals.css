@@ -414,6 +414,13 @@ h3 {
   text-align: center;
 }
 
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 .contact h2 {
   max-width: 800px;
   margin: 0 auto 40px;

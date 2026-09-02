@@ -390,9 +390,33 @@ export default function Home() {
 
           <h2>Let&apos;s create something worth watching.</h2>
 
-          <a href="mailto:you@example.com" className="button button-primary">
-            you@example.com
-          </a>
+          <div className="contact-buttons">
+            <a
+              href="mailto:flexxmosh@gmail.com"
+              target="_blank"
+              className="button button-primary"
+            >
+              Email me
+            </a>
+
+            <a
+              href="https://wa.me/254728312868"
+              className="button button-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp me
+            </a>
+
+            <a
+              href="https://t.me/flexxmosh"
+              className="button button-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Telegram me
+            </a>
+          </div>
         </section>
       </main>
 
