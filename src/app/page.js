@@ -65,9 +65,19 @@ const featuredVideos = [
     embedUrl: "https://www.instagram.com/p/DZ5DKhrguIp/embed/",
   },
   {
+    title: "Lumohubs Talking Head",
+    platform: "YouTube Short",
+    embedUrl: "https://www.youtube.com/embed/Y8vvjql2fBA",
+  },
+  {
     title: "Lumohubs",
     platform: "Instagram Reel",
     embedUrl: "https://www.instagram.com/p/DZmxKfRgsyN/embed/",
+  },
+  {
+    title: "Lumohubs Talking Head",
+    platform: "YouTube Short",
+    embedUrl: "https://www.youtube.com/embed/JwPDsawSvGQ",
   },
   {
     title: "Lumohubs",
@@ -75,9 +85,19 @@ const featuredVideos = [
     embedUrl: "https://www.instagram.com/p/DZpjvPyiso-/embed/",
   },
   {
+    title: "Lumohubs Talking Head",
+    platform: "YouTube Short",
+    embedUrl: "https://www.youtube.com/embed/NrME6dfC_qo",
+  },
+  {
     title: "Lumohubs",
     platform: "Instagram Reel",
     embedUrl: "https://www.instagram.com/p/DaiGKGDjs1W/embed/",
+  },
+  {
+    title: "Lumohubs Talking Head",
+    platform: "YouTube Short",
+    embedUrl: "https://www.youtube.com/embed/OTrjvIZx7Ao",
   },
   {
     title: "Lumohubs",
@@ -85,14 +105,29 @@ const featuredVideos = [
     embedUrl: "https://www.instagram.com/p/DbA6T0jDtlw/embed/",
   },
   {
+    title: "Lumohubs Talking Head",
+    platform: "YouTube Short",
+    embedUrl: "https://www.youtube.com/embed/OTrjvIZx7Ao",
+  },
+  {
     title: "Lumohubs",
     platform: "Instagram Reel",
     embedUrl: "https://www.instagram.com/p/DbGMXEQiiJd/embed/",
   },
   {
+    title: "Lumohubs Talking Head",
+    platform: "YouTube Short",
+    embedUrl: "https://www.youtube.com/embed/OTrjvIZx7Ao",
+  },
+  {
     title: "Lumohubs",
     platform: "Instagram Reel",
     embedUrl: "https://www.instagram.com/p/DbadLyiD33_/embed/",
+  },
+  {
+    title: "Lumohubs Talking Head",
+    platform: "YouTube Short",
+    embedUrl: "https://www.youtube.com/embed/OTrjvIZx7Ao",
   },
   {
     title: "Lumohubs",
