@@ -7,22 +7,22 @@ const projects = [
   {
     title: "Commercial Edit",
     category: "Advertisement",
-    embedUrl: "",
+    embedUrl: "https://www.youtube.com/embed/xIhFUg3wBLw",
   },
   {
     title: "Creator Documentary",
     category: "YouTube",
-    embedUrl: "",
+    embedUrl: "https://www.youtube.com/embed/CAuiLeZK6_8",
   },
   {
     title: "Product Launch",
     category: "Social Media",
-    embedUrl: "",
+    embedUrl: "https://www.youtube.com/embed/BOPLHJKyBZ8",
   },
   {
     title: "Brand Story",
     category: "Corporate",
-    embedUrl: "",
+    embedUrl: "https://www.youtube.com/embed/jPbF9YeUfL8",
   },
 ];
 
