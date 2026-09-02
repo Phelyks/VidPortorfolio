@@ -1,0 +1,6 @@
+files to be changed:
+1. page.js
+2. globals.css
+3.phelyks-hero.png
+
+

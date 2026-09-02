@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const projects = [
   {
     title: "Commercial Edit",
@@ -22,7 +24,7 @@ export default function Home() {
     <>
       <header className="site-header">
         <a href="#" className="logo">
-          YOUR NAME
+          PHELYKS
         </a>
 
         <nav aria-label="Main navigation">
@@ -34,23 +36,38 @@ export default function Home() {
 
       <main>
         <section className="hero">
-          <p className="eyebrow">Video Editor &amp; Storyteller</p>
+          <div className="hero-content">
+            <p className="eyebrow">Video Editor &amp; Storyteller</p>
 
-          <h1>I turn raw footage into stories people remember.</h1>
+            <h1>I turn raw footage into stories people remember.</h1>
 
-          <p className="hero-description">
-            I create engaging videos for brands, businesses, and online
-            creators.
-          </p>
+            <p className="hero-description">
+              I create engaging videos for brands, businesses, and online
+              creators.
+            </p>
 
-          <div className="hero-actions">
-            <a href="#work" className="button button-primary">
-              View my work
-            </a>
+            <div className="hero-actions">
+              <a href="#work" className="button button-primary">
+                View my work
+              </a>
 
-            <a href="#contact" className="button button-secondary">
-              Contact me
-            </a>
+              <a href="#contact" className="button button-secondary">
+                Contact me
+              </a>
+            </div>
+          </div>
+
+          <div className="hero-portrait">
+            <div className="portrait-glow" />
+
+            <Image
+              src="/images/phelyks-hero.png"
+              alt="Phelyks, video editor and storyteller"
+              width={1122}
+              height={1402}
+              className="portrait-image"
+              priority
+            />
           </div>
         </section>
 
@@ -72,8 +89,8 @@ export default function Home() {
             </div>
 
             <p>
-              These placeholders will later become project thumbnails and
-              video case studies.
+              These placeholders will later become project thumbnails and video
+              case studies.
             </p>
           </div>
 
@@ -101,8 +118,8 @@ export default function Home() {
 
             <div>
               <p>
-                Write a short introduction here. Explain who you work with,
-                what kinds of videos you edit, and what makes your approach
+                Write a short introduction here. Explain who you work with, what
+                kinds of videos you edit, and what makes your approach
                 different.
               </p>
 
@@ -126,7 +143,7 @@ export default function Home() {
       </main>
 
       <footer>
-        <p>© {new Date().getFullYear()} Your Name</p>
+        <p>© {new Date().getFullYear()} Phelyks</p>
 
         <div className="social-links">
           <a
