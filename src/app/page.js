@@ -25,9 +25,9 @@ const projects = [
 // Replace these sample URLs with your own YouTube Shorts and Instagram Reels.
 const featuredVideos = [
   {
-    title: "Lumohubs short-form edit",
+    title: "Lumohubs Talking Head",
     platform: "YouTube Short",
-    embedUrl: "https://www.youtube.com/embed/aqz-KE-bpKQ",
+    embedUrl: "https://www.youtube.com/embed/KJ0yNQpOrrE/embed/",
   },
   {
     title: "Social media reel",
@@ -37,7 +37,7 @@ const featuredVideos = [
   {
     title: "Story-driven vertical edit",
     platform: "YouTube Short",
-    embedUrl: "https://www.youtube.com/embed/ScMzIvxBSi4",
+    embedUrl: "https://www.youtube.com/embed/NrME6dfC_qo",
   },
   {
     title: "Lumohubs",
@@ -45,9 +45,19 @@ const featuredVideos = [
     embedUrl: "https://www.instagram.com/p/DbLxByQkmhy/embed/",
   },
   {
+    title: "Lumohubs Talking Head",
+    platform: "YouTube Short",
+    embedUrl: "https://www.youtube.com/embed/LYjuFH1GEs8",
+  },
+  {
     title: "Lumohubs",
     platform: "Instagram Reel",
     embedUrl: "https://www.instagram.com/p/DbA6T0jDtlw/embed/",
+  },
+  {
+    title: "Lumohubs Talking Head",
+    platform: "YouTube Short",
+    embedUrl: "https://www.youtube.com/embed/OTrjvIZx7Ao",
   },
   {
     title: "Lumohubs",
