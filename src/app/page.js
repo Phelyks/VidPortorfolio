@@ -184,7 +184,8 @@ function WorkCarousel() {
       const gap = parseFloat(window.getComputedStyle(track).gap) || 0;
       const distance = (card?.getBoundingClientRect().width || 320) + gap;
       const endReached =
-        track.scrollLeft + track.clientWidth >= track.scrollWidth - distance / 2;
+        track.scrollLeft + track.clientWidth >=
+        track.scrollWidth - distance / 2;
 
       track.scrollTo({
         left: endReached ? 0 : track.scrollLeft + distance,
@@ -198,11 +199,7 @@ function WorkCarousel() {
   }, [autoScrollActive]);
 
   return (
-    <section
-      className="showreel"
-      id="work"
-      aria-labelledby="showreel-heading"
-    >
+    <section className="showreel" id="work" aria-labelledby="showreel-heading">
       <div className="carousel-heading">
         <div>
           <p className="eyebrow">View my work</p>
@@ -224,15 +221,19 @@ function WorkCarousel() {
         aria-label="Featured video carousel"
       >
         {featuredVideos.map((video, index) => (
-          <article
-            className="reel-card"
-            key={`${video.embedUrl}-${index}`}
-          >
-            <div className="reel-frame">
+          <article className="reel-card" key={`${video.embedUrl}-${index}`}>
+            <div
+              className={`reel-frame ${
+                video.platform.toLowerCase().includes("instagram")
+                  ? "instagram-frame"
+                  : ""
+              }`}
+            >
               <iframe
                 src={video.embedUrl}
                 title={video.title}
                 loading="lazy"
+                scrolling="no"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               />
