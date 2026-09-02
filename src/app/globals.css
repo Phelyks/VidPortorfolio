@@ -524,13 +524,14 @@ footer {
   .reel-track {
     gap: 30px;
     margin-inline: -12px;
-    padding-inline: 12px;
+    padding-inline: max(9vw, calc(50vw - 165px));
+    scroll-padding-inline: max(9vw, calc(50vw - 165px));
   }
 
   .reel-card {
     flex-basis: min(82vw, 330px);
+    scroll-snap-align: center;
   }
-
   .reel-details {
     align-items: flex-start;
     flex-direction: column;
