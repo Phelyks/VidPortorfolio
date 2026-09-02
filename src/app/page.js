@@ -77,7 +77,7 @@ const featuredVideos = [
   {
     title: "Lumohubs Talking Head",
     platform: "YouTube Short",
-    embedUrl: "https://www.youtube.com/embed/JwPDsawSvGQ",
+    embedUrl: "https://www.youtube.com/embed/miNkxmhYlKo",
   },
   {
     title: "Lumohubs",
@@ -87,7 +87,7 @@ const featuredVideos = [
   {
     title: "Lumohubs Talking Head",
     platform: "YouTube Short",
-    embedUrl: "https://www.youtube.com/embed/NrME6dfC_qo",
+    embedUrl: "https://www.youtube.com/embed/Zo_wwan7nXY",
   },
   {
     title: "Lumohubs",
@@ -97,7 +97,7 @@ const featuredVideos = [
   {
     title: "Lumohubs Talking Head",
     platform: "YouTube Short",
-    embedUrl: "https://www.youtube.com/embed/OTrjvIZx7Ao",
+    embedUrl: "https://www.youtube.com/embed/kNNLZvY2sYs",
   },
   {
     title: "Lumohubs",
@@ -107,7 +107,7 @@ const featuredVideos = [
   {
     title: "Lumohubs Talking Head",
     platform: "YouTube Short",
-    embedUrl: "https://www.youtube.com/embed/OTrjvIZx7Ao",
+    embedUrl: "https://www.youtube.com/embed/1hZpWk-ZuaI",
   },
   {
     title: "Lumohubs",
@@ -117,7 +117,7 @@ const featuredVideos = [
   {
     title: "Lumohubs Talking Head",
     platform: "YouTube Short",
-    embedUrl: "https://www.youtube.com/embed/OTrjvIZx7Ao",
+    embedUrl: "https://www.youtube.com/embed/btZz8u9rCqQ",
   },
   {
     title: "Lumohubs",
@@ -127,7 +127,7 @@ const featuredVideos = [
   {
     title: "Lumohubs Talking Head",
     platform: "YouTube Short",
-    embedUrl: "https://www.youtube.com/embed/OTrjvIZx7Ao",
+    embedUrl: "https://www.youtube.com/embed/TsVAGF4WguY",
   },
   {
     title: "Lumohubs",
