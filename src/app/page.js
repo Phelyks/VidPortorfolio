@@ -47,6 +47,46 @@ const featuredVideos = [
   {
     title: "Lumohubs",
     platform: "Instagram Reel",
+    embedUrl: "https://www.instagram.com/p/DbA6T0jDtlw/embed/",
+  },
+  {
+    title: "Lumohubs",
+    platform: "Instagram Reel",
+    embedUrl: "https://www.instagram.com/p/DZ5DKhrguIp/embed/",
+  },
+  {
+    title: "Lumohubs",
+    platform: "Instagram Reel",
+    embedUrl: "https://www.instagram.com/p/DZmxKfRgsyN/embed/",
+  },
+  {
+    title: "Lumohubs",
+    platform: "Instagram Reel",
+    embedUrl: "https://www.instagram.com/p/DZpjvPyiso-/embed/",
+  },
+  {
+    title: "Lumohubs",
+    platform: "Instagram Reel",
+    embedUrl: "https://www.instagram.com/p/DaiGKGDjs1W/embed/",
+  },
+  {
+    title: "Lumohubs",
+    platform: "Instagram Reel",
+    embedUrl: "https://www.instagram.com/p/DbA6T0jDtlw/embed/",
+  },
+  {
+    title: "Lumohubs",
+    platform: "Instagram Reel",
+    embedUrl: "https://www.instagram.com/p/DbGMXEQiiJd/embed/",
+  },
+  {
+    title: "Lumohubs",
+    platform: "Instagram Reel",
+    embedUrl: "https://www.instagram.com/p/DbadLyiD33_/embed/",
+  },
+  {
+    title: "Lumohubs",
+    platform: "Instagram Reel",
     embedUrl: "https://www.instagram.com/p/DbVaqdejKRH/embed/",
   },
 ];
