@@ -372,14 +372,18 @@ export default function Home() {
 
             <div>
               <p>
-                Write a short introduction here. Explain who you work with, what
-                kinds of videos you edit, and what makes your approach
-                different.
+                I’m a video editor who turns webinars, interviews, and raw ideas
+                into clear, engaging stories. My work with LumoHubs and AWIThub
+                spans long-form event recaps, speaker-led content, YouTube
+                videos, Reels, Shorts, and promotional edits designed for
+                different platforms.
               </p>
-
               <p>
-                Your full biography, software experience, and editing process
-                can be added later.
+                I combine thoughtful storytelling, clean pacing, subtitles,
+                sound, and AI-assisted creative workflows to get more value from
+                every recording. Whether it’s a 90-second social clip or a full
+                webinar, my focus is simple: keep the message clear and the
+                audience watching.
               </p>
             </div>
           </div>
@@ -424,16 +428,9 @@ export default function Home() {
         <p>© {new Date().getFullYear()} Phelyks</p>
 
         <div className="social-links">
+          
           <a
-            href="https://instagram.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Instagram
-          </a>
-
-          <a
-            href="https://youtube.com/"
+            href="https://www.youtube.com/@flexxmosh"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -441,7 +438,7 @@ export default function Home() {
           </a>
 
           <a
-            href="https://linkedin.com/"
+            href="https://www.linkedin.com/in/flexxmosh/"
             target="_blank"
             rel="noopener noreferrer"
           >
