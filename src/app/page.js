@@ -206,12 +206,12 @@ function WorkCarousel() {
       <div className="carousel-heading">
         <div>
           <p className="eyebrow">View my work</p>
-          <h2 id="showreel-heading">Short-form edits in motion.</h2>
+          <h2 id="showreel-heading">Short Form Videos | Reels</h2>
         </div>
 
         <p>
           A selection of vertical videos created for social media, brands, and
-          online communities.
+          content creators.
         </p>
       </div>
 
