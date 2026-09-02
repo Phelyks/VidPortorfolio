@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 const projects = [
   {
@@ -18,6 +21,159 @@ const projects = [
     category: "Corporate",
   },
 ];
+
+// Replace these sample URLs with your own YouTube Shorts and Instagram Reels.
+const featuredVideos = [
+  {
+    title: "Lumohubs short-form edit",
+    platform: "YouTube Short",
+    embedUrl: "https://www.youtube.com/embed/aqz-KE-bpKQ",
+  },
+  {
+    title: "Social media reel",
+    platform: "Lumohubs IG Reel",
+    embedUrl: "https://www.instagram.com/p/DbdpALtFXLr/embed/",
+  },
+  {
+    title: "Story-driven vertical edit",
+    platform: "YouTube Short",
+    embedUrl: "https://www.youtube.com/embed/ScMzIvxBSi4",
+  },
+  {
+    title: "Lumohubs",
+    platform: "Instagram Reel",
+    embedUrl: "https://www.instagram.com/p/DbLxByQkmhy/embed/",
+  },
+  {
+    title: "Lumohubs",
+    platform: "Instagram Reel",
+    embedUrl: "https://www.instagram.com/p/DbVaqdejKRH/embed/",
+  },
+];
+
+function WorkCarousel() {
+  const trackRef = useRef(null);
+  const timerRef = useRef(null);
+  const [autoScrollActive, setAutoScrollActive] = useState(true);
+
+  const stopAutoScroll = useCallback(() => {
+    setAutoScrollActive(false);
+
+    if (timerRef.current) {
+      window.clearInterval(timerRef.current);
+      timerRef.current = null;
+    }
+  }, []);
+
+  const moveCarousel = useCallback(
+    (direction) => {
+      stopAutoScroll();
+
+      const track = trackRef.current;
+      if (!track) return;
+
+      const card = track.querySelector(".reel-card");
+      const gap = parseFloat(window.getComputedStyle(track).gap) || 0;
+      const distance = (card?.getBoundingClientRect().width || 320) + gap;
+
+      track.scrollBy({
+        left: direction * distance,
+        behavior: "smooth",
+      });
+    },
+    [stopAutoScroll],
+  );
+
+  useEffect(() => {
+    if (!autoScrollActive) return undefined;
+
+    timerRef.current = window.setInterval(() => {
+      const track = trackRef.current;
+      if (!track) return;
+
+      const card = track.querySelector(".reel-card");
+      const gap = parseFloat(window.getComputedStyle(track).gap) || 0;
+      const distance = (card?.getBoundingClientRect().width || 320) + gap;
+      const endReached =
+        track.scrollLeft + track.clientWidth >= track.scrollWidth - distance / 2;
+
+      track.scrollTo({
+        left: endReached ? 0 : track.scrollLeft + distance,
+        behavior: "smooth",
+      });
+    }, 3500);
+
+    return () => {
+      if (timerRef.current) window.clearInterval(timerRef.current);
+    };
+  }, [autoScrollActive]);
+
+  return (
+    <section
+      className="showreel"
+      id="work"
+      aria-labelledby="showreel-heading"
+    >
+      <div className="carousel-heading">
+        <div>
+          <p className="eyebrow">View my work</p>
+          <h2 id="showreel-heading">Short-form edits in motion.</h2>
+        </div>
+
+        <p>
+          A selection of vertical videos created for social media, brands, and
+          online communities.
+        </p>
+      </div>
+
+      <div
+        className="reel-track"
+        ref={trackRef}
+        onPointerDown={stopAutoScroll}
+        onTouchStart={stopAutoScroll}
+        onWheel={stopAutoScroll}
+        aria-label="Featured video carousel"
+      >
+        {featuredVideos.map((video) => (
+          <article className="reel-card" key={`${video.platform}-${video.title}`}>
+            <div className="reel-frame">
+              <iframe
+                src={video.embedUrl}
+                title={video.title}
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+
+            <div className="reel-details">
+              <h3>{video.title}</h3>
+              <p>{video.platform}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div className="carousel-controls" aria-label="Carousel controls">
+        <button
+          type="button"
+          onClick={() => moveCarousel(-1)}
+          aria-label="Show previous video"
+        >
+          <span aria-hidden="true">←</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => moveCarousel(1)}
+          aria-label="Show next video"
+        >
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
+    </section>
+  );
+}
 
 export default function Home() {
   return (
@@ -71,17 +227,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="showreel" aria-label="Video showreel">
-          <div className="video-placeholder">
-            <button type="button" aria-label="Play showreel">
-              ▶
-            </button>
+        <WorkCarousel />
 
-            <p>Showreel coming soon</p>
-          </div>
-        </section>
-
-        <section className="section" id="work">
+        <section className="section" id="projects">
           <div className="section-heading">
             <div>
               <p className="eyebrow">Selected work</p>
