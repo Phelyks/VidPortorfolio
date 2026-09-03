@@ -428,7 +428,7 @@ export default function Home() {
 
         <div className="social-links">
           <a
-            href="https://instagram.com/"
+            href="https://www.tiktok.com/@flexxvids"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -436,7 +436,7 @@ export default function Home() {
           </a>
 
           <a
-            href="https://youtube.com/"
+            href="https://www.youtube.com/@flexxmosh"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -444,7 +444,7 @@ export default function Home() {
           </a>
 
           <a
-            href="https://linkedin.com/"
+            href="https://www.linkedin.com/in/flexxmosh/"
             target="_blank"
             rel="noopener noreferrer"
           >
