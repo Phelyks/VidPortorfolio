@@ -568,6 +568,48 @@ footer {
   .social-links {
     flex-wrap: wrap;
   }
+  .contact {
+  padding-inline: 12px;
+}
+
+.contact h2 {
+  max-width: 330px;
+  margin-bottom: 30px;
+}
+
+.contact-buttons {
+  width: min(100%, 280px);
+  margin-inline: auto;
+  grid-template-columns: 1fr;
+  display: grid;
+  gap: 12px;
+}
+
+.contact-buttons .button {
+  width: 100%;
+}
+
+footer {
+  align-items: center;
+  flex-direction: column-reverse;
+  gap: 14px;
+  padding: 24px 0 30px;
+  text-align: center;
+}
+
+.social-links {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+.social-links a {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 }
 
 /* Small phones */

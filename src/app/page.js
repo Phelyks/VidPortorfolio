@@ -397,7 +397,6 @@ export default function Home() {
           <div className="contact-buttons">
             <a
               href="mailto:flexxmosh@gmail.com"
-              target="_blank"
               className="button button-primary"
             >
               Email me
@@ -428,9 +427,16 @@ export default function Home() {
         <p>© {new Date().getFullYear()} Phelyks</p>
 
         <div className="social-links">
-          
           <a
-            href="https://www.youtube.com/@flexxmosh"
+            href="https://instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram
+          </a>
+
+          <a
+            href="https://youtube.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -438,7 +444,7 @@ export default function Home() {
           </a>
 
           <a
-            href="https://www.linkedin.com/in/flexxmosh/"
+            href="https://linkedin.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
